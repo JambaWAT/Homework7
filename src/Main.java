@@ -34,7 +34,9 @@ public class Main {
             int year = 0;
             int birthRate = 17;
             int mortality = 8;
-            int people = 1000;
+            mortality = mortality * 12000;
+            birthRate = birthRate * 12000;
+            int people = 12000000;
             while (year < 10) {
                 year++;
                 people = people + birthRate;
@@ -90,17 +92,16 @@ public class Main {
             System.out.println ("Сегодня пятница, " + day +"-е число. Необходимо подготовить отчет");
             while (day <= 31) {
                 day = day + 7;
-                if (day > 31) {break;}
-               else System.out.println("Сегодня пятница, " + day +"-е число. Необходимо подготовить отчет");
+                 System.out.println("Сегодня пятница, " + day +"-е число. Необходимо подготовить отчет");
 
             }
         }
         System.out.println("Задача 8");
         {
-            int year = 1817;
-            while (year < 2054) {year= year + 79;
-            System.out.println("Комета прибудет в" + year + " году");
-                if (year > 2054) {break;}}
+            int year = 0;
+            while (year < 2054) {year= year + 79;if (year % 79 == 0) {
+            System.out.println("Комета прибудет в " + year + " году");}
+                }
 
         }
     }
