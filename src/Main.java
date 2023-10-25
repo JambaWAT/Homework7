@@ -31,17 +31,12 @@ public class Main {
         }
         System.out.println("Задача 3");
         {
-            int year = 0;
-            int birthRate = 17;
-            int mortality = 8;
-            mortality = mortality * 12000;
-            birthRate = birthRate * 12000;
-            int people = 12000000;
-            while (year < 10) {
-                year++;
-                people = people + birthRate;
-                people = people - mortality;
-                System.out.println("Год " + year + " численность населения составляет: " + people);
+            int population = 12_000_000;
+            for (int year = 1; year <=10; year++){
+                int birthRate = population / 1000 *17;
+                int deathRate = population / 1000 * 8;
+                population = population + birthRate - deathRate;
+                System.out.println("Год " + year + " численность населения составляет: " + population);
 
             }
         }
@@ -99,7 +94,7 @@ public class Main {
         System.out.println("Задача 8");
         {
             int year = 0;
-            while (year < 2054) {year= year + 79;if (year % 79 == 0) {
+            while (year < 2054) {year= year + 79;if (year > 1823) {
             System.out.println("Комета прибудет в " + year + " году");}
                 }
 
