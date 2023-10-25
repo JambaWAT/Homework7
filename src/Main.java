@@ -2,16 +2,103 @@
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        System.out.println("Задача 1");
+        {
+            int total = 0;
+            int salary = 15000;
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+            int currentMonth = 1;
+            while (total <= 2459000) {
+                total = total + salary;
+                currentMonth++;
+            }
 
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
+            System.out.println("Месяц " + currentMonth + " сумма накоплений равна:" + total + " рублей");
+        }
+        System.out.println("Задача 2");
+        {
+            int i = 0;
+            while (i < 10) {
+                i++;
+                System.out.print(i + " ");
+            }
+            System.out.println();
+
+            for (int j = 10; j >= 1; j--) {
+                System.out.print(j + " ");
+            }
+
+        }
+        System.out.println("Задача 3");
+        {
+            int population = 12_000_000;
+            for (int year = 1; year <=10; year++){
+                int birthRate = population / 1000 *17;
+                int deathRate = population / 1000 * 8;
+                population = population + birthRate - deathRate;
+                System.out.println("Год " + year + " численность населения составляет: " + population);
+
+            }
+        }
+        System.out.println("Задача 4");
+        {
+            int amountPurpose = 12_000_000;
+            int depositAmount = 15000;
+            double monthlyPercent = 0.07;
+            int month = 1;
+
+            while (depositAmount < amountPurpose) {
+                depositAmount += depositAmount * monthlyPercent;
+                System.out.printf("Месяц %d, сумма накоплений: %d%n", month, depositAmount);
+                month++;
+            }
+        }
+        System.out.println("Задача 5");
+        {
+            int amountPurpose = 12_000_000;
+            int depositAmount = 15000;
+            double monthlyPercent = 0.07;
+            int month = 1;
+
+            while (depositAmount < amountPurpose) {
+                depositAmount += depositAmount * monthlyPercent;
+                month++;
+                if (month % 6 == 0) {
+                    System.out.printf("Месяц %d, сумма накоплений: %d%n", month, depositAmount);
+                }
+            }
+        }
+        System.out.println("Задача 6");
+        {
+            int depositAmount = 15000;
+            double monthlyPercent = 0.07;
+            int month = 1;
+            while (month <= 108) {
+                depositAmount += depositAmount * monthlyPercent;
+                month++;
+                if (month % 6 == 0) {
+                    System.out.printf("Месяц %d, сумма накоплений: %d%n", month, depositAmount);
+                }
+            }
+        }
+        System.out.println("Задача 7");
+        {
+            int day = 1;
+            System.out.println ("Сегодня пятница, " + day +"-е число. Необходимо подготовить отчет");
+            while (day <= 31) {
+                day = day + 7;
+                 System.out.println("Сегодня пятница, " + day +"-е число. Необходимо подготовить отчет");
+
+            }
+        }
+        System.out.println("Задача 8");
+        {
+            int year = 0;
+            while (year < 2054) {year= year + 79;if (year > 1823) {
+            System.out.println("Комета прибудет в " + year + " году");}
+                }
+
         }
     }
 }
+
